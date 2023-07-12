@@ -135,9 +135,3 @@ export async function PATCH(
     });
   }
 }
-
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
