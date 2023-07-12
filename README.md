@@ -40,7 +40,9 @@
 ## Table of Contents
 
 - [Disclaimer](#disclaimer)
+- [Pre-Requisites](#prerequisites)
 - [Description](#description)
+- [eSuite APIs](#esuite-apis)
 - [ToDo](#todo)
 - [Features](#features)
 - [Installation](#installation)
@@ -50,6 +52,16 @@
 ## Disclaimer
 
 Please note that this repo is purely for example purposes and therefore may not cater for all use cases and error handling. This should not be used in a production environment.
+
+## Pre-Requisites
+
+You will need the following if you are to use this code locally
+
+- eSuite environment
+- eSuite API Key
+- Valid Account Reference which has a cart purchase on the account which contains a physical product with an issuing schedule.
+
+Please contact your Account Manager / Customer Support Representive or Onboarding Team if you are unsure on the above.
 
 ## Description
 
@@ -126,6 +138,18 @@ Clicking `Search` again will update the demo table (automatic re-render will be 
 **Updated Demo Table**
 
 <img alt="demo-after-refund" src="./public/static/images/demo_site_afterrefund.png" alt="drawing" style="width:75%;"/>
+
+## eSuite APIs
+
+The following eSuite APIs have been used to create this demo
+
+- [GET Account Information](https://dev.mppglobal.com/reference/accounts_getaccountv11)
+- [GET Account Payments](https://dev.mppglobal.com/reference/orders_getaccountpaymentsv11_12)
+- [GET Account Fulfilments](https://dev.mppglobal.com/reference/fulfilment_getaccountfulfilmentv11_1)
+- [POST Payment Refund](https://dev.mppglobal.com/reference/orders_refundorderv11_14)
+- [PATCH Fulfilment](https://dev.mppglobal.com/reference/fulfilment_amendfulfimentdetailparametersv11_1)
+
+The APIs are called from a server and therefore use Server Side credentials. To read more about the authentication options available, see [here](https://support.mppglobal.com/integration/api-authorisation/)
 
 ## Todo
 
